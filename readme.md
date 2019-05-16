@@ -61,10 +61,10 @@ This repository's sole purpose is to demonstrate how to built a AWS with Packer 
     bundle install
     ```
 - You should now have KitcheCI setup, now you need to specify the region and the availability zone that the AMI you want to test is located, replace the values below in templateAWS.json file with the ones valid for your AMI : 
-```shell
-  region: us-east-1 --> CHANGE IT TO FIT YOUR NEEDS
-  availability_zone: us-east-1d --> CHANGE IT TO FIT YOUR NEEDS
-```
+    ```shell
+      region: us-east-1 --> CHANGE IT TO FIT YOUR NEEDS
+      availability_zone: us-east-1d --> CHANGE IT TO FIT YOUR NEEDS
+    ```
 - Create a [SSH key pair in AWS](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#key-pairs), set `.pem` file in the templateAWS.json with follwoing command: 
     ```shell
     ln -s PATH_TO_YOUR_PEM_FILE key.pem
