@@ -1,0 +1,21 @@
+driver:
+  name: ec2
+  region: us-east-1
+  availability_zone: us-east-1d
+
+provisioner:
+  name: shell
+
+verifier:
+  name: inspec
+
+platforms:
+- name: packer_AWS
+  driver:
+    image_id: ami-0444fa3496fb4fab2
+  transport:
+    username: ubuntu
+    ssh_key: ./key.pem
+
+suites:
+  - name: default
